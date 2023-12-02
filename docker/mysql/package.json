@@ -1,0 +1,17 @@
+{
+  "name": "mysql",
+  "version": "1.0.0",
+  "description": "This Dockerfile facilitates the setup of a MySQL container with port 3306 exposed. It utilizes the official MySQL base image and offers flexibility through customizable environment variables for configuration.",
+  "main": "index.js",
+  "scripts": {
+    "build-image": "docker build -t my-mysql-image . || podman build -t my-mysql-image .",
+    "run-container": "docker run -p 3306:3306 --name my-mysql-container -d my-mysql-image || podman run -p 3306:3306 --name my-mysql-container -d my-mysql-image",
+    "restart-container": "docker restart my-mysql-container || podman restart my-mysql-container",
+    "stop-container": "docker stop my-mysql-container || podman stop my-mysql-container",
+    "check-status": "docker ps || podman ps",
+    "check-all-status": "docker ps -a || podman ps -a",
+    "inspect-container": "docker inspect my-mysql-container || podman inspect my-mysql-container"
+  },
+  "author": "",
+  "license": "ISC"
+}
