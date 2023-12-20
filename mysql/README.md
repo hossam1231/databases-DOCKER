@@ -7,13 +7,13 @@ This Dockerfile facilitates the setup of a MySQL container with port 3306 expose
 ### Build the Docker Image
 
 ```bash
-docker build -t my-mysql-image .
+docker build -t mysql-dmu-image .
 ```
 
 ### Run the MySQL Container
 
 ```bash
-docker run -p 3306:3306 --name my-mysql-container -d my-mysql-image
+docker run -p 3306:3306 --name mysql-dmu-container -d mysql-dmu-image
 ```
 
 Adjust the following environment variables as needed:
